@@ -9,7 +9,7 @@ export default function createIteratorObject(report) {
     next() {
       if (currIndex < maxIndex) {
         const result = { value: all[currIndex], done: false };
-        currIndex += 1;
+        currIndex -= 1;
         return result;
       }
       return { value: null, done: false };
