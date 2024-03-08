@@ -1,4 +1,4 @@
-import Building from './5-vuilding';
+import Building from './5-building';
 
 export default class SkyHighBuilding extends Building {
   constructor(sqrt, floors) {
@@ -11,7 +11,7 @@ export default class SkyHighBuilding extends Building {
   }
 
   get floors() {
-    return this._floor;
+    return this._floors;
   }
 
   evacuationWarningMessage() {
