@@ -1,8 +1,6 @@
 export default function cleanSet(set, startString) {
-  if (!startString || !startString.length) {
-    return ('');
-  }
-  const filteredValues = [...set].filter((value) => value.startsWith(startString));
-  const substrings = filteredValues.map((value) => value.substring(startString.length));
-  return substrings.join('-');
+  let res = '';
+  if (!startString || !startString.length) return res;
+  for (const value of set) { if (value && value.startsWith(startString)) res += `${value.slice(startString.length)}-`; }
+  return res.slice(0, res.length - 1);
 }
